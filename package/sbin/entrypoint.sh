@@ -182,7 +182,7 @@ then
   if [[ -n $(command -v gomplate) ]]
   then
     echo gomplate found    
-    if ! gomplate $(find $SC4S_ETC/conf.d/local/config/ -name "*.tmpl" | sed -E 's/^(\/.*\/)*(.*)\..*$/--file=\2.tmpl --out=\2/') --template t=$SC4S_ETC/go_templates/
+    if ! gomplate $(find . -name "*.tmpl" | sed -E 's/^(\/.*\/)*(.*)\..*$/--file=\2.tmpl --out=\2/') --template t=$SC4S_ETC/go_templates/
     then
       echo "Error in Gomplate template; unable to continue, exiting..."
       exit 800
