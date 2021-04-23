@@ -63,12 +63,12 @@ for group in dests:
         url=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_URL"),
         token=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_TOKEN"),
         log_fifo_size=os.getenv(
-            f"SC4S_DEST_SPLUNK_HEC_{ group }_LOG_FIFO_SIZE", 180000000
+            f"SC4S_DEST_SPLUNK_HEC_{ group }_LOG_FIFO_SIZE", 100000
         ),
         workers=workers,
         batch_lines=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_BATCH_LINES", 5000),
-        batch_bytes=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_BATCH_BYTES", "4096kb"),
-        batch_timeout=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_BATCH_TIMEOUT", 300),
+        batch_bytes=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_BATCH_BYTES", "1024kb"),
+        batch_timeout=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_BATCH_TIMEOUT", 3),
         timeout=os.getenv(f"SC4S_DEST_SPLUNK_HEC_{ group }_TIMEOUT", 30),
         headers=os.getenv(
             f"SC4S_DEST_SPLUNK_HEC_{ group }_HEADERS", "Connection: close"

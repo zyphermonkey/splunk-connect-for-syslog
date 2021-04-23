@@ -14,7 +14,7 @@ services:
       context: ..
       dockerfile: package/Dockerfile
     hostname: sc4s
-    command: -det
+    #command: -det
     ports:
       - "514"
       - "601"
