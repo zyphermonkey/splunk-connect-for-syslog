@@ -70,7 +70,7 @@ for port_id in ports.split(","):
         port_tcp_sockets=int(os.getenv(f"SC4S_SOURCE_LISTEN_TCP_SOCKETS", 20)),
         port_tcp_max_connections=os.getenv(f"SC4S_SOURCE_TCP_MAX_CONNECTIONS", "100"),
         port_tcp_log_iw_size=os.getenv(f"SC4S_SOURCE_TCP_IW_SIZE", "200000"),
-        port_tcp_log_fetch_limit=os.getenv(f"SC4S_SOURCE_TCP_FETCH_LIMIT", "100"),
+        port_tcp_log_fetch_limit=os.getenv(f"SC4S_SOURCE_TCP_FETCH_LIMIT", "10000"),
         port_tcp_so_recvbuff=os.getenv(f"SC4S_SOURCE_TCP_SO_RCVBUFF", "17039360"),
         port_tls=os.getenv(f"SC4S_LISTEN_{ port_id }_TLS_PORT", "disabled").split(","),
         port_tls_sockets=int(os.getenv(f"SC4S_SOURCE_LISTEN_TLS_SOCKETS", 1)),
